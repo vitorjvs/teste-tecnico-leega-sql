@@ -1,5 +1,5 @@
 CREATE TABLE Pessoa(
-	PessoaID INT PRIMARY KEY,
+    PessoaID INT PRIMARY KEY,
     PessoaNome VARCHAR(30)
     );
     
@@ -9,7 +9,7 @@ CREATE TABLE Pessoa(
     (2, 'José');
     
 CREATE TABLE Endereco(
-	EnderecoID INT PRIMARY KEY,
+    EnderecoID INT PRIMARY KEY,
     PessoaID INT NOT NULL,
     FOREIGN KEY (PessoaID) REFERENCES Pessoa(PessoaID),
     EnderecoDescricao VARCHAR(100)
@@ -23,8 +23,8 @@ CREATE TABLE Endereco(
    
     
 CREATE TABLE Telefone(
-	TelefoneID INT PRIMARY KEY,
-	PessoaID INT NOT NULL,
+    TelefoneID INT PRIMARY KEY,
+    PessoaID INT NOT NULL,
     FOREIGN KEY (PessoaID) REFERENCES Pessoa(PessoaID),
     TelefoneNumero VARCHAR(30)
     );
